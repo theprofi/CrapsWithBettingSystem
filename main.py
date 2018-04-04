@@ -13,6 +13,7 @@ current_time = time.asctime(time.localtime(time.time()))
 print("\n\nBuild Version:", str(build_version), "\nTime:", str(current_time), "\n\n")
 # -------------------------------------------------------------------------
 
+
 class Game:
 
     # Global Variables
@@ -53,6 +54,7 @@ class Game:
         Game.bankRoll = 1000
         print('You have been assigned an initial bankroll of $1,000, good luck!')
 
+
     @staticmethod
     def comeOutRoll():
         print("How Much Would you Like to Wager on the Pass Line?")
@@ -78,6 +80,7 @@ class Game:
 
         else:
             Game.secondPhase()
+
 
     @staticmethod
     def secondPhase():
@@ -144,7 +147,7 @@ class Game:
         if Game.bankRoll <= 0:
             lose = True
 
-    
+
     def loseGame(self):
         print('Oh dear, you are out of money.')
         Game.bankRoll = 0
@@ -155,7 +158,7 @@ class Game:
         else:
             quit(0)
 
-    
+    @staticmethod
     def ask_yes_no(question):
         response = None
 
@@ -173,7 +176,7 @@ class Game:
         else:
             return False
 
-    
+    @staticmethod
     def ask_for_value(question):
         """The solution for asking for a integer value without using exceptions """
 
@@ -191,7 +194,8 @@ class Game:
 
         return answer
 
-    
+
+
     def odds(calculation):
         if calculation == 4 or calculation == 10:
             Game.oddsAmount *= 2/1
